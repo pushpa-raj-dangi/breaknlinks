@@ -203,7 +203,7 @@ img {
 }
 
 .footer {
-  padding: 7rem 0;
+  padding: 6rem 0;
   background-color: #192831;
   color: #777;
 }
@@ -313,5 +313,15 @@ img {
 }
 
 .medium-title:hover,.big-title:hover,.small-title:hover {
+  color: var(--primary-color);
+}
+
+img{
+  border-radius: 4px;
+}
+.numbering{
+  font-size: 80px;
+  font-weight: 900;
+  font-family: "Mukta";
   color: var(--primary-color);
 }

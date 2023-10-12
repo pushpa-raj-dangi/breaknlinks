@@ -1,742 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Break</title>
-    
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://breaknlinks.com/np/frontend/fontawesome/css/all.css" type="text/css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-<script nonce="eefb35c1-7a2a-43bc-9594-9c9760ba89de">(function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return async function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})),{})))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
-
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header class="container-fluid mb-5">
-      <nav class="navbar container navbar-expand-lg fw-bold">
-        <div class="container-fluid top-nav">
-          <a class="others fw-medium" href="#">अन्य संस्करण</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <spanclass="navbar-toggler-icon"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link ps-4" aria-current="page" href="#">
-                  नेपाली</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">English</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Hindi</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">Español</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="#">عربي한국어中文</a>
-              </li>
-            </ul>
-
-            <ul class="d-flex list-style align-items-center gap-2">
-              <li class="border link-item p-1 px-2 rounded-1 list-item">
-                <a href="" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-facebook"
-                    viewBox="0 0 16 16"
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Break</title>
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+         crossorigin="anonymous"
+         />
+      <link rel="stylesheet" href="https://breaknlinks.com/np/frontend/fontawesome/css/all.css" type="text/css"/>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+         rel="stylesheet"
+         />
+      <script nonce="eefb35c1-7a2a-43bc-9594-9c9760ba89de">(function(w,d){!function(a,b,c,d){a[c]=a[c]||{};a[c].executed=[];a.zaraz={deferred:[],listeners:[]};a.zaraz.q=[];a.zaraz._f=function(e){return async function(){var f=Array.prototype.slice.call(arguments);a.zaraz.q.push({m:e,a:f})}};for(const g of["track","set","debug"])a.zaraz[g]=a.zaraz._f(g);a.zaraz.init=()=>{var h=b.getElementsByTagName(d)[0],i=b.createElement(d),j=b.getElementsByTagName("title")[0];j&&(a[c].t=b.getElementsByTagName("title")[0].text);a[c].x=Math.random();a[c].w=a.screen.width;a[c].h=a.screen.height;a[c].j=a.innerHeight;a[c].e=a.innerWidth;a[c].l=a.location.href;a[c].r=b.referrer;a[c].k=a.screen.colorDepth;a[c].n=b.characterSet;a[c].o=(new Date).getTimezoneOffset();if(a.dataLayer)for(const n of Object.entries(Object.entries(dataLayer).reduce(((o,p)=>({...o[1],...p[1]})),{})))zaraz.set(n[0],n[1],{scope:"page"});a[c].q=[];for(;a.zaraz.q.length;){const q=a.zaraz.q.shift();a[c].q.push(q)}i.defer=!0;for(const r of[localStorage,sessionStorage])Object.keys(r||{}).filter((t=>t.startsWith("_zaraz_"))).forEach((s=>{try{a[c]["z_"+s.slice(7)]=JSON.parse(r.getItem(s))}catch{a[c]["z_"+s.slice(7)]=r.getItem(s)}}));i.referrerPolicy="origin";i.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(a[c])));h.parentNode.insertBefore(i,h)};["complete","interactive"].includes(b.readyState)?zaraz.init():a.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script>
+   </head>
+   <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body>
+      <header class="container-fluid mb-5">
+         <nav class="navbar container navbar-expand-lg fw-bold">
+            <div class="container-fluid top-nav">
+               <a class="others fw-medium" href="#">अन्य संस्करण</a>
+               <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
                   >
-                    <path
-                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="border link-item p-1 px-2 rounded-1 list-item">
-                <a href="" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-twitter-x"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="border link-item p-1 px-2 rounded-1 list-item">
-                <a href="" target="_blank">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-youtube"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
-                    />
-                  </svg>
-                </a>
-              </li>
-              <li class="border link-item p-1 px-2 rounded-1 list-item">
-                <a
-                  href="https://breaknlinks.com/nepali/preeti-to-unicode"
-                  target="_blank"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-keyboard"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z"
-                    />
-                    <path
-                      d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z"
-                    />
-                  </svg>
-                  युनिकोड
-                </a>
-              </li>
-
-              <li class="border link-item rounded-1 list-item">
-                <button class="btn" type="button" id="inputGroupFileAddon04">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-search"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-
-    <section class="bg-body-tertiary my-nav border-bottom">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg py-0"  style="border-top: 4px solid #f00;">
-          <div class="container-fluid">
-            <a class="d-inline-block" href="/">
-              <img
-                style="height: 56px; object-fit: contain; margin-left: -25px"
-                id="logo_image_nav"
-                class="me-5"
-                src="https://breaknlinks.com/frontend/img/logo.png"
-                alt="BL Media"
-                data-pagespeed-url-hash="2345619438"
-                data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
-                onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"
-                data-pagespeed-loaded="1"
-              />
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <spanclass="navbar-toggler-icon"></i>
-            </button>
-            <div
-              class="collapse navbar-collapse pe-5"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/break"
-                    class="nav-link"
-                  >
-                    <nobr> ब्रेक </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/bl-special"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> बिएल विशेष </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/brandstory"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> ब्राण्ड स्टोरी </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/social-10-2-28"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> समाज </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/politics-38-27-36"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> राजनीति </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/sports-9-18"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> खेल </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/opinion"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> विचार/विश्लेषण </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/econimics"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> अर्थ </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/art-1"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> कला </nobr>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    href="https://breaknlinks.com/nepali/category/nrna"
-                    class="nav-link"
-                    style="padding: 0.8em 1.2em !important"
-                  >
-                    <nobr> एनआरएन </nobr>
-                  </a>
-                </li>
-              </ul>
+               <spanclass="navbar-toggler-icon"></i>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                        <a class="nav-link ps-4" aria-current="page" href="#">
+                        नेपाली</a
+                           >
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">English</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Hindi</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Español</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">عربي한국어中文</a>
+                     </li>
+                  </ul>
+                  <ul class="d-flex list-style align-items-center gap-2">
+                     <li class="border link-item p-1 px-2 rounded-1 list-item">
+                        <a href="" target="_blank">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-facebook"
+                              viewBox="0 0 16 16"
+                              >
+                              <path
+                                 d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                                 />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="border link-item p-1 px-2 rounded-1 list-item">
+                        <a href="" target="_blank">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-twitter-x"
+                              viewBox="0 0 16 16"
+                              >
+                              <path
+                                 d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"
+                                 />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="border link-item p-1 px-2 rounded-1 list-item">
+                        <a href="" target="_blank">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-youtube"
+                              viewBox="0 0 16 16"
+                              >
+                              <path
+                                 d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                                 />
+                           </svg>
+                        </a>
+                     </li>
+                     <li class="border link-item p-1 px-2 rounded-1 list-item">
+                        <a
+                           href="https://breaknlinks.com/nepali/preeti-to-unicode"
+                           target="_blank"
+                           >
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-keyboard"
+                              viewBox="0 0 16 16"
+                              >
+                              <path
+                                 d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z"
+                                 />
+                              <path
+                                 d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z"
+                                 />
+                           </svg>
+                           युनिकोड
+                        </a>
+                     </li>
+                     <li class="border link-item rounded-1 list-item">
+                        <button class="btn" type="button" id="inputGroupFileAddon04">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-search"
+                              viewBox="0 0 16 16"
+                              >
+                              <path
+                                 d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                 />
+                           </svg>
+                        </button>
+                     </li>
+                  </ul>
+               </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    </section>
- <div class="container banner position-relative  text-center my-5 py-4">
-  <div class="text-center mb-4 fw-bolder story-title position-relative fs-5 shadow-sm bg-break-primary d-inline-flex px-4 py-2 fw-bolder rounded-2">
-    
-    संविधान र सर्वोच्च
-</div>
-<a href="">
-        <figure class="position-relative">
-          <img class="rounded-4" src="https://im.indiatimes.in/content/2023/Aug/aircraft3_64df2b13dc377.jpg" alt="">
-          
-            <h4 class="big-title mt-5 text-center">
-              संविधान र सर्वोच्चको नजीरले भन्छ- केदार कार्की कोशीको मुख्यमन्त्री</h4>
-              <h5 class="fw-bold text-muted">
-                - रविन पुन मगर (आइडु) - काठमाडौं
-                </h5>
-          </figure>
-          </a>
-    </div>
-
-
-    <section class="container mt-5">
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <h5 class="header-title">एंकर</h5>
-        </div>
-        <div class="col-md-6">
-          <figure class="position-relative cover-photo">
-            <img
-              src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/snow-fall-15752934920643.jpg"
-              alt=""
-            />
-
-            <figcaption>-मुम्बई</figcaption>
-          </figure>
-
-          <a href="">
-            <h1 class="medium-title">
-              कुल्लूको यात्राः हिउँको मजासँगै चियाको चुस्की
-            </h1>
-            <p class="post-description">
-              कुल्लू मनालीका होटल तथा कपडा व्यापारीहरूको अनुहारमा सबैभन्दा बढी
-              रौनक हिउँ परेको समयमा झल्किन्छ। पर्यटकहरू ह्यात्तै बढ्छन् र
-              स्थानीय व्यापारी राम्रो आम्दानी हुने गर्छन्।
-            </p>
-          </a>
-        </div>
-        <div class="col-md-6 small-col">
-          <div class="row">
-            <div class="col-md-6">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/kashmir-11.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/Myanmar%E2%80%93%E0%A4%AE%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B0/myanmar-military-crackdown-mandalay-march-27-2021.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title">जोशीमठ किन भासिँदै छ?</h1>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/joshi-math-6.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/kashmir-11.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-   
-
-    <section
-      class="container-fluid my-5 bishesh py-5"
-      style="background-color: #222a33"
-    >
-      <div class="container">
-        <div class="col-md-12 mb-4">
-          <h5 class="header-title text-white">बिएल विशेष</h5>
-        </div>
-        <div class="row">
-          <div class="col-md-3">
-            <div class="black-box">
-              <figure class="position-relative">
-                <img
-                  src="https://d13sbnamffvfth.cloudfront.net/np/Aartha%20News/falful-fruit.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title p-3 text-white">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="black-box">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/Rajniti%20%E2%80%93%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF/Ramchanda-poudel-President.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title p-3 text-white">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="black-box">
-              <figure class="position-relative">
-                <img
-                  src="https://d13sbnamffvfth.cloudfront.net/np/rajneti/BIRODH-KHATIWADA-1-.jpg.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title p-3 text-white">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="black-box">
-              <figure class="position-relative">
-                <img
-                  src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/joshi-math-6.jpg"
-                  alt=""
-                />
-
-                <figcaption>-मुम्बई</figcaption>
-              </figure>
-
-              <a href="">
-                <h1 class="small-title p-3 text-white">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container-fluid my-5 py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="col-md-12 mb-4">
-              <h5 class="header-title">राजनीति</h5>
-            </div>
-            <div class="row bg-black g-0">
-              <div class="col-md-7">
-                <figure class="position-relative">
+         </nav>
+      </header>
+      <section class="bg-body-tertiary my-nav border-bottom">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg py-0"  style="border-top: 4px solid #f00;">
+               <div class="container-fluid">
+                  <a class="d-inline-block" href="/">
                   <img
-                    src="https://d13sbnamffvfth.cloudfront.net/np/Aartha%20News/falful-fruit.jpg"
-                    alt=""
-                  />
-                  <figcaption>-मुम्बई</figcaption>
-                </figure>
-              </div>
-              <div class="col-md-5">
-                <a class="p-3" href="">
-                  <h1 class="small-title p-3 text-white">
-                    ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                  </h1>
-                  <p class="post-description-sm p-3" style="color: #ccc">
-                    निर्वाचनमा सङ्घीय संसद्का तीन सय ३२ सांसद र प्रदेशसभाका पाँच
-                    सय ५० प्रदेशसभा सदस्य मतदाता छन्। मतदान...
-                  </p>
-                  <span class="p-3 text-light">बिएल संवाददाता -काठमाडाैँ </i>
-                </a>
-              </div>
-            </div>
-            <div class="row rajniti-second-row mt-4">
-              <div class="col-md-4">
-                <div>
-                  <figure class="position-relative mb-3">
-                    <img
-                      src="https://breaknlinks.com/np/storage/photos/22/kala%E2%80%93%E0%A4%95%E0%A4%B2%E0%A4%BE/isha%20gupta%20%E2%80%93%20%E0%A4%87%E0%A4%B6%E0%A4%BE%20%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4%E0%A4%BE.jpg"
-                      alt=""
-                    />
-                  </figure>
-
-                  <a href="">
-                    <h1 class="small-title py-1">
-                      गफ हाँक्दैमा कर्णालीले दोहोरो अंकमा स्वर्ण जित्दैन
-                    </h1>
+                     style="height: 56px; object-fit: contain; margin-left: -25px"
+                     id="logo_image_nav"
+                     class="me-5"
+                     src="https://breaknlinks.com/frontend/img/logo.png"
+                     alt="BL Media"
+                     data-pagespeed-url-hash="2345619438"
+                     data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                     onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"
+                     data-pagespeed-loaded="1"
+                     />
                   </a>
-                  <span class="text-muted fs-6 fw-bold text-info">
-                    बिएल संवाददाता -काठमाडाैँ
-                  </f>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div>
-                  <figure class="position-relative mb-3">
-                    <img
-                      src="https://breaknlinks.com/np/storage/photos/22/Rajniti%20%E2%80%93%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF/Ramchanda-poudel-President.jpg"
-                      alt=""
-                    />
-                  </figure>
-
-                  <a href="">
-                    <h1 class="small-title py-1">
-                      ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                    </h1>
-                  </a>
-                  <span class="text-muted source fs-6 fw-bold text-info">
-                    बिएल संवाददाता -काठमाडाैँ
-                  </i>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div>
-                  <figure class="position-relative">
-                    <img
-                      src="https://breaknlinks.com/np/storage/photos/22/kala%E2%80%93%E0%A4%95%E0%A4%B2%E0%A4%BE/vani%20kapoor,%20%E0%A4%B5%E0%A4%BE%E0%A4%A3%E0%A5%80%20%E0%A4%95%E0%A4%AA%E0%A5%82%E0%A4%B0.jpg"
-                      alt=""
-                    />
-                  </figure>
-
-                  <a href="">
-                    <h1 class="small-title py-1">
-                      ‘हट’ अवतारमा इशा गुप्ता (फोटोफिचर)
-                    </h1>
-                  </a>
-                  <span class="text-muted fs-6 fw-bold text-info">
-                    बिएल संवाददाता -काठमाडाैँ
-                  </i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="col-md-12 mb-4">
-              <h5 class="header-title">समाज</h5>
-            </div>
-            <div class="border-bottom border-2 pb-2">
-              <figure class="position-relative">
-                <img
-                  src="https://d13sbnamffvfth.cloudfront.net/np/Kala/priyanka-chopada-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%82%E0%A4%95%E0%A4%BE-%E0%A4%9A%E0%A5%8B%E0%A4%AA%E0%A4%A1%E0%A4%BE.jpg"
-                  alt=""
-                />
-              </figure>
-
-              <a href="">
-                <h1 class="small-title py-1">
-                  ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
-                </h1>
-              </a>
-            </div>
-
-            <ul class="list-style list-group mt-3">
-              <li class="m-0 my-2">
-                <a class="d-flex align-items-center " href="">
-                 <span
-                 class="breklink-badge"
-                 >
-                  ०१
-                 </span>
-                  <h2 class="samaj-title">
-                    तीन महिनामा ४ अर्ब ८६ करोडभन्दा बढीको तरकारी
-                  </h2>
-                </a>
-                <span class="ms-5 ps-2 souce fw-bold text-muted">
-                  बिएल संवाददाता -काठमाडाैँ
-                </span>
-              </li>
-              
-              <li class="m-0 my-2">
-                <a class="d-flex align-items-center " href="">
-                 <span
-                 class="breklink-badge"
-                 >
-                  ०२
-                 </span>
-                  <h2 class="samaj-title">
-                   सुकुम्बासीले पाएनन् लालपुर्जा, सरकारप्रति छैन भरोसा
-                  </h2>
-                </a>
-                <span class="ms-5 souce ps-2 fw-bold text-muted">
-                  बिएल संवाददाता -काठमाडाैँ
-                </span>
-              </li>
-              
-              <li class="m-0 my-2">
-                <a class="d-flex align-items-center " href="">
-                 <span
-                 class="breklink-badge"
-                 >
-                  ०३
-                 </span>
-                  <h2 class="samaj-title">
-                    पाठ्यपुस्तक सधैंकाे पिराेलाे
-                  </h2>
-                </a>
-                <span class="ms-5  souce ps-2 fw-bold text-muted">
-                  बिएल संवाददाता -काठमाडाैँ
-                </span>
-              </li>
-              
-              
-             
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section>
-      
+                  <button
+                     class="navbar-toggler"
+                     type="button"
+                     data-bs-toggle="collapse"
+                     data-bs-target="#navbarSupportedContent"
+                     aria-controls="navbarSupportedContent"
+                     aria-expanded="false"
+                     aria-label="Toggle navigation"
+                     >
+                  <span class="navbar-toggler-icon"></i>
+                  </button>
+                  <div
+                     class="collapse navbar-collapse pe-5"
+                     id="navbarSupportedContent"
+                     >
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/break"
+                              class="nav-link"
+                              >
+                              <nobr> ब्रेक </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/bl-special"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> बिएल विशेष </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/brandstory"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> ब्राण्ड स्टोरी </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/social-10-2-28"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> समाज </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/politics-38-27-36"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> राजनीति </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/sports-9-18"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> खेल </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/opinion"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> विचार/विश्लेषण </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/econimics"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> अर्थ </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/art-1"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> कला </nobr>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a
+                              href="https://breaknlinks.com/nepali/category/nrna"
+                              class="nav-link"
+                              style="padding: 0.8em 1.2em !important"
+                              >
+                              <nobr> एनआरएन </nobr>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
       </section>
-
-
-
-    <footer class="footer">
-<div class="container">
-<div class="row">
-<div class="col-md-4 pr-md-5">
-    <a 
-     class="d-flex gap-3 align-items-center"
-    href="https://breaknlinks.com/np/np">
-        <img src="https://breaknlinks.com/frontend/img/logo.png"
-        class="img-fluid"
-        style="width:150px;height: 100px;object-fit: contain;"
-        alt="BL Media">
-<div class="">
-  <p class="fw-bold fs-4  lh-sm text-white">BL Media Inc</p>
-  <p class="text-white lh-sm">Media for all across the globe</p>
-</div>
-
-</a>
- 
-</div>
-<div class="col-md">
-  <h1 class="fw-bold text-break-primary text-uppercase">Editions</h1>
-  <ul class="list-unstyled nav-links">
-    <li><a href="#">English</a></li>
-    <li><a href="#">Nepali</a></li>
-    <li><a href="#">Hindi</a></li>
-    <li><a href="#">Español</a></li>
-    <li><a href="#">عربي한국어中文</a></li>
-</ul>
-</div>
-<div class="col-md">
-  <h1 class="fw-bold text-break-primary text-uppercase">About Us</h1>
-<ul class="list-unstyled nav-links">
-<li><a href="#">Email : breaknlinks@gmail.com
-</a></li>
-<li><a href="#">Contact No :  +97714496040</a></li>
-<li><a href="#">
-Address : New Baneshowr,10 Kathmandu</a></li>
-<li><a href="#">Reg.No.350/2075-76</a></li>
-</ul>
-</div>
-
-<div class="col-md">
-
-<p class><a class="text-white fw-bold  text-break-primary text-uppercase">Follow Us</a></p>
-<ul class="social list-unstyled">
-<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-</svg></a></li>
-<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-</svg></a></li>
-<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-</svg></a></li>
-<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-</svg></a></li>
-
-</ul>
-</div>
-</div>
-<div class="row">
-<div class="col-12 text-center">
-<div class="copyright mt-5 pt-5">
-<p><small class="fs-6">&copy; 2023 All Rights Reserved.</small></p>
-</div>
-</div>
-</div>
-</div>
-</footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="container banner position-relative  text-center my-5 py-4">
+         <div class="text-center mb-4 fw-bolder story-title position-relative fs-5 shadow-sm bg-break-primary d-inline-flex px-4 py-2 fw-bolder rounded-2">
+            संविधान र सर्वोच्च
+         </div>
+         <a href="">
+            <figure class="position-relative">
+               <img class="rounded-4" src="https://im.indiatimes.in/content/2023/Aug/aircraft3_64df2b13dc377.jpg" alt="">
+               <h4 class="big-title mt-5 text-center">
+                  संविधान र सर्वोच्चको नजीरले भन्छ- केदार कार्की कोशीको मुख्यमन्त्री
+               </h4>
+               <h5 class="fw-bold text-muted">
+                  - रविन पुन मगर (आइडु) - काठमाडौं
+               </h5>
+            </figure>
+         </a>
+      </div>
+      <section class="container mt-5">
+         <div class="row">
+            <div class="col-md-12 mb-4">
+               <h5 class="header-title">एंकर</h5>
+            </div>
+            <div class="col-md-6">
+               <figure class="position-relative cover-photo">
+                  <img
+                     src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/snow-fall-15752934920643.jpg"
+                     alt=""
+                     />
+                  <figcaption>-मुम्बई</figcaption>
+               </figure>
+               <a href="">
+                  <h1 class="medium-title">
+                     कुल्लूको यात्राः हिउँको मजासँगै चियाको चुस्की
+                  </h1>
+                  <p class="post-description">
+                     कुल्लू मनालीका होटल तथा कपडा व्यापारीहरूको अनुहारमा सबैभन्दा बढी
+                     रौनक हिउँ परेको समयमा झल्किन्छ। पर्यटकहरू ह्यात्तै बढ्छन् र
+                     स्थानीय व्यापारी राम्रो आम्दानी हुने गर्छन्।
+                  </p>
+               </a>
+            </div>
+            <div class="col-md-6 small-col">
+               <div class="row">
+                  <div class="col-md-6">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/kashmir-11.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+                  <div class="col-md-6">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/Myanmar%E2%80%93%E0%A4%AE%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%A8%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%B0/myanmar-military-crackdown-mandalay-march-27-2021.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title">जोशीमठ किन भासिँदै छ?</h1>
+                     </a>
+                  </div>
+                  <div class="col-md-6">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/joshi-math-6.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+                  <div class="col-md-6">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/kashmir-11.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section
+         class="container-fluid my-5 bishesh py-5"
+         style="background-color: #222a33"
+         >
+         <div class="container">
+            <div class="col-md-12 mb-4">
+               <h5 class="header-title text-white">बिएल विशेष</h5>
+            </div>
+            <div class="row">
+               <div class="col-md-3">
+                  <div class="black-box">
+                     <figure class="position-relative">
+                        <img
+                           src="https://d13sbnamffvfth.cloudfront.net/np/Aartha%20News/falful-fruit.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title p-3 text-white">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="black-box">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/Rajniti%20%E2%80%93%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF/Ramchanda-poudel-President.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title p-3 text-white">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="black-box">
+                     <figure class="position-relative">
+                        <img
+                           src="https://d13sbnamffvfth.cloudfront.net/np/rajneti/BIRODH-KHATIWADA-1-.jpg.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title p-3 text-white">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3">
+                  <div class="black-box">
+                     <figure class="position-relative">
+                        <img
+                           src="https://breaknlinks.com/np/storage/photos/22/India%E2%80%93%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4/joshi-math-6.jpg"
+                           alt=""
+                           />
+                        <figcaption>-मुम्बई</figcaption>
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title p-3 text-white">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="col-md-12 mb-4">
+                     <h5 class="header-title">राजनीति</h5>
+                  </div>
+                  <div class="row bg-black g-0">
+                     <div class="col-md-7">
+                        <figure class="position-relative">
+                           <img
+                              src="https://d13sbnamffvfth.cloudfront.net/np/Aartha%20News/falful-fruit.jpg"
+                              alt=""
+                              />
+                           <figcaption>-मुम्बई</figcaption>
+                        </figure>
+                     </div>
+                     <div class="col-md-5">
+                        <a class="p-3" href="">
+                           <h1 class="small-title p-3 text-white">
+                              ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                           </h1>
+                           <p class="post-description-sm p-3" style="color: #ccc">
+                              निर्वाचनमा सङ्घीय संसद्का तीन सय ३२ सांसद र प्रदेशसभाका पाँच
+                              सय ५० प्रदेशसभा सदस्य मतदाता छन्। मतदान...
+                           </p>
+                           <span class="p-3 text-light">बिएल संवाददाता -काठमाडाैँ </i>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="row rajniti-second-row mt-4">
+                     <div class="col-md-4">
+                        <div>
+                           <figure class="position-relative mb-3">
+                              <img
+                                 src="https://breaknlinks.com/np/storage/photos/22/kala%E2%80%93%E0%A4%95%E0%A4%B2%E0%A4%BE/isha%20gupta%20%E2%80%93%20%E0%A4%87%E0%A4%B6%E0%A4%BE%20%E0%A4%97%E0%A5%81%E0%A4%AA%E0%A5%8D%E0%A4%A4%E0%A4%BE.jpg"
+                                 alt=""
+                                 />
+                           </figure>
+                           <a href="">
+                              <h1 class="small-title py-1">
+                                 गफ हाँक्दैमा कर्णालीले दोहोरो अंकमा स्वर्ण जित्दैन
+                              </h1>
+                           </a>
+                           <span class="text-muted fs-6 fw-bold text-info">
+                           बिएल संवाददाता -काठमाडाैँ
+                           </f>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div>
+                           <figure class="position-relative mb-3">
+                              <img
+                                 src="https://breaknlinks.com/np/storage/photos/22/Rajniti%20%E2%80%93%20%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF/Ramchanda-poudel-President.jpg"
+                                 alt=""
+                                 />
+                           </figure>
+                           <a href="">
+                              <h1 class="small-title py-1">
+                                 ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                              </h1>
+                           </a>
+                           <span class="text-muted source fs-6 fw-bold text-info">
+                           बिएल संवाददाता -काठमाडाैँ
+                           </i>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div>
+                           <figure class="position-relative">
+                              <img
+                                 src="https://breaknlinks.com/np/storage/photos/22/kala%E2%80%93%E0%A4%95%E0%A4%B2%E0%A4%BE/vani%20kapoor,%20%E0%A4%B5%E0%A4%BE%E0%A4%A3%E0%A5%80%20%E0%A4%95%E0%A4%AA%E0%A5%82%E0%A4%B0.jpg"
+                                 alt=""
+                                 />
+                           </figure>
+                           <a href="">
+                              <h1 class="small-title py-1">
+                                 ‘हट’ अवतारमा इशा गुप्ता (फोटोफिचर)
+                              </h1>
+                           </a>
+                           <span class="text-muted fs-6 fw-bold text-info">
+                           बिएल संवाददाता -काठमाडाैँ
+                           </i>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="col-md-12 mb-4">
+                     <h5 class="header-title">समाज</h5>
+                  </div>
+                  <div class="border-bottom border-2 pb-2">
+                     <figure class="position-relative">
+                        <img
+                           src="https://d13sbnamffvfth.cloudfront.net/np/Kala/priyanka-chopada-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%AF%E0%A4%82%E0%A4%95%E0%A4%BE-%E0%A4%9A%E0%A5%8B%E0%A4%AA%E0%A4%A1%E0%A4%BE.jpg"
+                           alt=""
+                           />
+                     </figure>
+                     <a href="">
+                        <h1 class="small-title py-1">
+                           ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                        </h1>
+                     </a>
+                  </div>
+                  <ul class="list-style list-group mt-3">
+                     <li class="m-0 my-2">
+                        <a class="d-flex align-items-center " href="">
+                           <span
+                              class="breklink-badge"
+                              >
+                           ०१
+                           </span>
+                           <h2 class="samaj-title">
+                              तीन महिनामा ४ अर्ब ८६ करोडभन्दा बढीको तरकारी
+                           </h2>
+                        </a>
+                        <span class="ms-5 ps-2 souce fw-bold text-muted">
+                        बिएल संवाददाता -काठमाडाैँ
+                        </span>
+                     </li>
+                     <li class="m-0 my-2">
+                        <a class="d-flex align-items-center " href="">
+                           <span
+                              class="breklink-badge"
+                              >
+                           ०२
+                           </span>
+                           <h2 class="samaj-title">
+                              सुकुम्बासीले पाएनन् लालपुर्जा, सरकारप्रति छैन भरोसा
+                           </h2>
+                        </a>
+                        <span class="ms-5 souce ps-2 fw-bold text-muted">
+                        बिएल संवाददाता -काठमाडाैँ
+                        </span>
+                     </li>
+                     <li class="m-0 my-2">
+                        <a class="d-flex align-items-center " href="">
+                           <span
+                              class="breklink-badge"
+                              >
+                           ०३
+                           </span>
+                           <h2 class="samaj-title">
+                              पाठ्यपुस्तक सधैंकाे पिराेलाे
+                           </h2>
+                        </a>
+                        <span class="ms-5  souce ps-2 fw-bold text-muted">
+                        बिएल संवाददाता -काठमाडाैँ
+                        </span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid mt-5 pt-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h5 class="header-title">Trending</h5>
+               </div>
+               <div class="col-md">
+                  <div class="media d-flex align-items-center">
+                     <h1 class="p-3 numbering">१.</h1>
+                     <div class="media-body">
+                        <h3 class="fw-bold fs-5">
+                           सर्लाही र बाँकेका सिडिओपछि प्रहरी प्रमुख पनि फेरिए
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md">
+                  <div class="media d-flex align-items-center">
+                     <h1 class="p-3 numbering">२.</h1>
+                     <div class="media-body">
+                        <h3 class="fw-bold fs-5">
+                           संविधान र सर्वोच्चको नजीरले भन्छ- केदार कार्की कोशीको मुख्यमन्त्री
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md">
+                  <div class="media d-flex align-items-center">
+                     <h1 class="p-3 numbering">३.</h1>
+                     <div class="media-body">
+                        <h3 class="fw-bold fs-5">
+                           तीन महिनामा ४ अर्ब ८६ करोडभन्दा बढीको तरकारी नेपाल भित्रियो
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md">
+                  <div class="media d-flex align-items-center">
+                     <h1 class="p-3 numbering">४.</h1>
+                     <div class="media-body">
+                        <h3 class="fw-bold fs-5">
+                           सर्लाही र बाँकेका सिडिओपछि प्रहरी प्रमुख पनि फेरिए
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="container-fluid py-5">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8">
+                  <div class="col-md-12">
+                     <h5 class="header-title mb-4">अर्थ</h5>
+                  </div>
+                  <div class="media d-flex mb-4 gap-4 align-items-center">
+                     <img 
+                        class="img-fluid" 
+                        style="width: 250px;"
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/%E0%A5%AA.-%E0%A4%A4%E0%A4%B8%E0%A5%8D%E0%A4%AC%E0%A5%80%E0%A4%B0-%E0%A4%AB%E0%A5%81%E0%A4%B2-%E0%A4%9A%E0%A4%A2%E0%A4%BE%E0%A4%89%E0%A4%A8%E0%A5%87-%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%BF%E0%A4%B0-%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%81%E0%A4%AC%E0%A4%BE%E0%A4%9F-%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A4%A8-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%81-%E0%A4%B9%E0%A5%81%E0%A4%A8%E0%A5%8D%E0%A4%9B.jpg" alt="">
+                     <div class="media-body">
+                        <h3 class="fw-bold medium-title fs-5">
+                           एमाले मधेश प्रदेशमा सर्वसम्मतिको खाका- यी हुन् प्रस्तावित पदाधिकारी
+                        </h3>
+                        <p class="post-description-sm">
+                           मण्डललाई प्रदेश अध्यक्षका लागि एमाले नेता लीलानाथ श्रेष्ठले अगाडी सारेका थिए । उनको पक्षमा एमाले मधेश प्रदेश संसदीय दलका नेता सरोज यादव र पोलिटब्यूरो सदस्य सुमन प्याकुरेल पनि उभिएपछि सहमति जुटेको बताइएको छ ।
+                        </p>
+                        <h5
+                           class="text-muted"
+                           >
+                           बिएल संवाददाता -म्यान्मार
+                        </h5>
+                     </div>
+                  </div>
+                  <div class="media d-flex mb-4 gap-4 align-items-center">
+                     <img 
+                        class="img-fluid" 
+                        style="width: 250px;"
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/JIbit-Kumari-pooja-@Basantapur-13.jpg" alt="">
+                     <div class="media-body">
+                        <h3 class="fw-bold medium-title fs-5">
+                           अशक्त नरबहादुर भन्छन्– आफन्तले अस्पतालमा अलपत्र पारे, प्रधानमन्त्रीलाई भेट्ने मन छ
+                        </h3>
+                        <p class="post-description-sm">
+                           मण्डललाई प्रदेश अध्यक्षका लागि एमाले नेता लीलानाथ श्रेष्ठले अगाडी सारेका थिए । उनको पक्षमा एमाले मधेश प्रदेश संसदीय दलका नेता सरोज यादव र पोलिटब्यूरो सदस्य सुमन प्याकुरेल पनि उभिएपछि सहमति जुटेको बताइएको छ ।
+                        </p>
+                        <h5
+                           class="text-muted"
+                           >
+                           बिएल संवाददाता -म्यान्मार
+                        </h5>
+                     </div>
+                  </div>
+                  <div class="media d-flex mb-4 gap-4 align-items-center">
+                     <img 
+                        class="img-fluid" 
+                        style="width: 250px;"
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/%E0%A5%AA.-%E0%A4%A4%E0%A4%B8%E0%A5%8D%E0%A4%AC%E0%A5%80%E0%A4%B0-%E0%A4%AB%E0%A5%81%E0%A4%B2-%E0%A4%9A%E0%A4%A2%E0%A4%BE%E0%A4%89%E0%A4%A8%E0%A5%87-%E0%A4%AE%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%BF%E0%A4%B0-%E0%A4%AF%E0%A4%B9%E0%A4%BE%E0%A4%81%E0%A4%AC%E0%A4%BE%E0%A4%9F-%E0%A4%AA%E0%A4%BE%E0%A4%9F%E0%A4%A8-%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A5%87%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%B8%E0%A5%81%E0%A4%B0%E0%A5%81-%E0%A4%B9%E0%A5%81%E0%A4%A8%E0%A5%8D%E0%A4%9B.jpg" alt="">
+                     <div class="media-body">
+                        <h3 class="fw-bold medium-title fs-5">
+                           ओल खेती परीक्षणमा उदाहरणीय काम गर्दै कृषि अनुसन्धान केन्द्र बेलाचापी
+                        </h3>
+                        <p class="post-description-sm">
+                           मण्डललाई प्रदेश अध्यक्षका लागि एमाले नेता लीलानाथ श्रेष्ठले अगाडी सारेका थिए । उनको पक्षमा एमाले मधेश प्रदेश संसदीय दलका नेता सरोज यादव र पोलिटब्यूरो सदस्य सुमन प्याकुरेल पनि उभिएपछि सहमति जुटेको बताइएको छ ।
+                        </p>
+                        <h5
+                           class="text-muted"
+                           >
+                           बिएल संवाददाता -म्यान्मार
+                        </h5>
+                     </div>
+                  </div>
+                  <div class="media d-flex mb-4 gap-4 align-items-center">
+                     <img 
+                        class="img-fluid" 
+                        style="width: 250px;"
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/10/Barsha-Siwakoti900.jpg" alt="">
+                     <div class="media-body">
+                        <h3 class="fw-bold medium-title fs-5">
+                           अशक्त नरबहादुर भन्छन्– आफन्तले अस्पतालमा अलपत्र पारे, प्रधानमन्त्रीलाई भेट्ने मन छ
+                        </h3>
+                        <p class="post-description-sm">
+                           मण्डललाई प्रदेश अध्यक्षका लागि एमाले नेता लीलानाथ श्रेष्ठले अगाडी सारेका थिए । उनको पक्षमा एमाले मधेश प्रदेश संसदीय दलका नेता सरोज यादव र पोलिटब्यूरो सदस्य सुमन प्याकुरेल पनि उभिएपछि सहमति जुटेको बताइएको छ ।
+                        </p>
+                        <h5
+                           class="text-muted"
+                           >
+                           बिएल संवाददाता -म्यान्मार
+                        </h5>
+                     </div>
+                  </div>
+                  <div class="media d-flex mb-4 gap-4 align-items-center">
+                     <img 
+                        class="img-fluid" 
+                        style="width: 250px;"
+                        src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/JIbit-Kumari-pooja-@Basantapur-13.jpg" alt="">
+                     <div class="media-body">
+                        <h3 class="fw-bold medium-title fs-5">
+                           अशक्त नरबहादुर भन्छन्– आफन्तले अस्पतालमा अलपत्र पारे, प्रधानमन्त्रीलाई भेट्ने मन छ
+                        </h3>
+                        <p class="post-description-sm">
+                           मण्डललाई प्रदेश अध्यक्षका लागि एमाले नेता लीलानाथ श्रेष्ठले अगाडी सारेका थिए । उनको पक्षमा एमाले मधेश प्रदेश संसदीय दलका नेता सरोज यादव र पोलिटब्यूरो सदस्य सुमन प्याकुरेल पनि उभिएपछि सहमति जुटेको बताइएको छ ।
+                        </p>
+                        <h5
+                           class="text-muted"
+                           >
+                           बिएल संवाददाता -म्यान्मार
+                        </h5>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="col-md-12">
+                     <h5 class="header-title mb-4">latest news</h5>
+                  </div>
+                    
+                     <div class="bl-news bl-news--smallThumbs">
+                        <div class="bl-newsPost bl-newsPost--small">
+                           <figure class="post_img">
+                              <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                              <img src="https://breaknlinks.com/np/storage/photos/22/India–भारत/kashmir-11.jpg" alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                              </a>
+                           </figure>
+                           <div class="post_content">
+                              <h5 class="post_title">
+                                 <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                 ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                                 </a>
+                              </h5>
+                              <p class="post_source">
+                                 बिएल संवाददाता
+                                 -काठमाडाैँ
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bl-news bl-news--smallThumbs">
+                        <div class="bl-newsPost bl-newsPost--small">
+                           <figure class="post_img">
+                              <a href="https://breaknlinks.com/np/category/social-10-2-28/news/9">
+                              <img src="https://d18cmnmvofvv98.cloudfront.net/nepali/All%20Story%20photo/%E0%A4%AA%E0%A5%81%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A4%95%20%E0%A4%85%E0%A4%AD%E0%A4%BE%E0%A4%B5%20200%E0%A4%AD.jpg" alt="पाठ्यपुस्तक सधैंकाे पिराेलाे" data-pagespeed-url-hash="2399242883" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)" data-pagespeed-loaded="1">
+                              </a>
+                           </figure>
+                           <div class="post_content">
+                              <h5 class="post_title">
+                                 <a href="https://breaknlinks.com/np/category/social-10-2-28/news/9">
+                                 पाठ्यपुस्तक सधैंकाे पिराेलाे
+                                 </a>
+                              </h5>
+                              <p class="post_source">
+                                 महेश नेपाली
+                                 -जुम्ला
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bl-news bl-news--smallThumbs">
+                        <div class="bl-newsPost bl-newsPost--small">
+                           <figure class="post_img">
+                              <a href="https://breaknlinks.com/np/category/social-10-2-28/news/8">
+                              <img src="https://d18cmnmvofvv98.cloudfront.net/nepali/pp%20bl/331972460_3453297518322560_1870128994112218271_n.jpg" alt="सुकुम्बासीले पाएनन् लालपुर्जा, सरकारप्रति छैन भरोसा" data-pagespeed-url-hash="1167429461" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)" data-pagespeed-loaded="1">
+                              </a>
+                           </figure>
+                           <div class="post_content">
+                              <h5 class="post_title">
+                                 <a href="https://breaknlinks.com/np/category/social-10-2-28/news/8">
+                                 सुकुम्बासीले पाएनन् लालपुर्जा, सरकारप्रति छैन भरोसा
+                                 </a>
+                              </h5>
+                              <p class="post_source">
+                                 टोपेन्द्र रोका मगर
+                                 -काठमाडाैँ
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                  </div>
+            </div>
+         </div>
+      </section>
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 pr-md-5">
+                  <a 
+                     class="d-flex gap-3 align-items-center"
+                     href="https://breaknlinks.com/np/np">
+                     <img src="https://breaknlinks.com/frontend/img/logo.png"
+                        class="img-fluid"
+                        style="width:150px;height: 100px;object-fit: contain;"
+                        alt="BL Media">
+                     <div class="">
+                        <p class="fw-bold fs-4  lh-sm text-white">BL Media Inc</p>
+                        <p class="text-white lh-sm">Media for all across the globe</p>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-md">
+                  <h1 class="fw-bold text-break-primary text-uppercase">Editions</h1>
+                  <ul class="list-unstyled nav-links">
+                     <li><a href="#">English</a></li>
+                     <li><a href="#">Nepali</a></li>
+                     <li><a href="#">Hindi</a></li>
+                     <li><a href="#">Español</a></li>
+                     <li><a href="#">عربي한국어中文</a></li>
+                  </ul>
+               </div>
+               <div class="col-md">
+                  <h1 class="fw-bold text-break-primary text-uppercase">About Us</h1>
+                  <ul class="list-unstyled nav-links">
+                     <li><a href="#">Email : breaknlinks@gmail.com
+                        </a>
+                     </li>
+                     <li><a href="#">Contact No :  +97714496040</a></li>
+                     <li><a href="#">
+                        Address : New Baneshowr,10 Kathmandu</a>
+                     </li>
+                     <li><a href="#">Reg.No.350/2075-76</a></li>
+                  </ul>
+               </div>
+               <div class="col-md">
+                  <p class><a class="text-white fw-bold  text-break-primary text-uppercase">Follow Us</a></p>
+                  <ul class="social list-unstyled">
+                     <li>
+                        <a href="#">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                           </svg>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                              <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                           </svg>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                           </svg>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                           </svg>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-12 text-center">
+                  <div class="copyright mt-5 pt-5">
+                     <p><small class="fs-6">&copy; 2023 All Rights Reserved.</small></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+         crossorigin="anonymous"
+         ></script>
+   </body>
 </html>
