@@ -325,3 +325,12 @@ img{
   font-family: "Mukta";
   color: var(--primary-color);
 }
+.bg-gradient-primary{
+  background: linear-gradient(360deg, black, transparent);
+}
+
+.overlay-postition-bttom{
+  position: absolute;
+    bottom: 10px;
+    padding: 10px;
+}
