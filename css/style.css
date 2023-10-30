@@ -430,4 +430,7 @@ a:hover{
   .kala img{
     width: 100px;
   }
+  .medium-title{
+    font-size: 22px;
+  }
 }
