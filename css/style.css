@@ -421,3 +421,13 @@ a:hover{
     font-weight: 500;
     line-height: 1.8;
 }
+
+.kala img{
+  width: 250px;
+}
+
+@media(max-width:575px){
+  .kala img{
+    width: 100px;
+  }
+}
