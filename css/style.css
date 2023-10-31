@@ -13,23 +13,37 @@ a {
 }
 .my-nav .nav-item a {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: black;
 }
 
 .link-item:hover {
   background-color: #ddd;
 }
+.small-nav{
+  margin: -15px auto;
+}
+
 .top-nav li {
   font-size: 16px;
+}
+
+.social-nav a{
+  font-size: 18px !important;
+  margin-top: 10px !important;
+}
+
+.small-nav #topnav{
+  margin-top: 10px;
 }
 
 .others {
   background: var(--primary-color);
   padding: 2px 15px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
 }
+
 
 .header-title {
   font-family: "Mukta", sans-serif;
@@ -203,11 +217,13 @@ img {
   color: #939393;
 }
 
+
 .footer {
-  padding: 2rem 0;
+  padding-top: 2rem;
   background-color: #192831;
   color: #777;
 }
+
 .footer .footer-site-logo {
   font-size: 1.5rem;
   color: #fff;
@@ -255,11 +271,11 @@ img {
     color: gray;
     padding: 7px;
     border: 1px solid #ddd;
-    width: 45px !important;
+    width: 30px !important;
     display: flex;
     justify-content: center;
     border-radius: 100%;
-    height: 45px;
+    height: 30px;
     align-items: center;
     background-color: var(--primary-color);
 }
@@ -271,7 +287,7 @@ img {
 
 .text-break-primary {
   color: #d7ff47 !important;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .bg-break-primary {
