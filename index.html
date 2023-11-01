@@ -22,21 +22,30 @@
    <link rel="stylesheet" href="./css/style.css" />
    </head>
    <body>
-      <header class="container-fluid">
+      <header class="container-fluid bg-primary">
          <nav class="navbar container d-md-none d-lg-block navbar-expand-lg fw-bold small-nav">
             <div class="container-fluid top-nav">
-               <a class="others fw-medium" href="#">अन्य संस्करण</a>
-               <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#topnav"
-                  aria-controls="topnav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                  >
-               <span class="navbar-toggler-icon"></i>
-               </button>
+               
+                  <a class="others fw-medium" href="#">अन्य संस्करण</a>
+                  <select
+                     class="form-control w-25 d-block d-md-none d-lg-none d-xl-none d-xxl-none form-control-sm bg-transparent border-0 text-white "
+                     onchange="location = this.value;" style="transition: max-height 1s;">
+                     <option class="bg-primary border-0" selected="" value="https://breaknlinks.com/en">
+                        English
+                     </option>
+                     <option class="bg-primary border-0" value="https://breaknlinks.com/nepali">
+                        नेपाली
+                     </option>
+                     <option class="bg-primary border-0" value="https://breaknlinks.com/hindi">
+                        हिन्दी
+                     </option>
+                     <option class="bg-primary border-0" value="https://breaknlinks.com/nepali">
+                        Nepal
+                     </option>
+                     <option class="bg-primary border-0" value="https://breaknlinks.com/eng">
+                        Eng
+                     </option>
+                  </select>
                <div class="collapse navbar-collapse" id="topnav">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                      <li class="nav-item">
@@ -129,13 +138,13 @@
                            युनिकोड
                         </a>
                      </li>
-                     <li class="small-nav">
-                        <button class="btn" type="button" id="inputGroupFileAddon04">
+                     <li class="small-nav d-flex">
+                        <button id="searchIcon" class="btn" type="button" id="inputGroupFileAddon04">
                            <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="16"
                               height="16"
-                              fill="currentColor"
+                              fill="white"
                               class="bi bi-search"
                               viewBox="0 0 16 16"
                               >
@@ -144,16 +153,31 @@
                                  />
                            </svg>
                         </button>
+                     <form action="" class="d-none d-flex" id="searchBox">
+                        <input type="text" class="form-control" placeholder="यहाँ टाईप गर्नुहोस्..." aria-label="Search"
+                           aria-describedby="button-addon4" />
+                     
+                        <!--  <button class="btn bg-white " type="button" id="button-addon4">
+                                                                                                                                                                                                                                                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                                                                                                                                                                                                                                                     viewBox="0 0 16 16">
+                                                                                                                                                                                                                                                                     <path
+                                                                                                                                                                                                                                                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                                                                                                                                                                                                                                  </svg>
+                                                                                                                                                                                                                                                               </button>
+                                                                                                                                                                                                                                                               -->
+                     
+                     </form>
                      </li>
                   </ul>
                </div>
             </div>
          </nav>
+         
       </header>
 
       <section class="bg-body-tertiary my-nav border-bottom">
          <div class="container">
-            <nav class="navbar navbar-expand-lg my-nav py-0" style="border-top: 4px solid #f00;">
+            <nav class="navbar navbar-expand-lg my-nav py-0">
                <div class="container-fluid">
                   <a class="d-inline-block" href="/">
                   <img
@@ -186,7 +210,7 @@
                      <ul class="navbar-nav me-auto mb-lg-0 align-items-center">
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/break"
+                              href="../category.html"
                               class="nav-link"
                               >
                               <nobr> ब्रेक </nobr>
@@ -194,7 +218,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/bl-special"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -203,7 +227,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/brandstory"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -212,7 +236,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/social-10-2-28"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -221,7 +245,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/politics-38-27-36"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -230,7 +254,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/sports-9-18"
+                              href="../category.html9-18"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -239,7 +263,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/opinion"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -248,7 +272,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/econimics"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -257,7 +281,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/art-1"
+                              href="../category.html1"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -266,7 +290,7 @@
                         </li>
                         <li class="nav-item">
                            <a
-                              href="https://breaknlinks.com/nepali/category/nrna"
+                              href="../category.html"
                               class="nav-link"
                               style="padding: 0.8em 1.2em !important"
                               >
@@ -1589,10 +1613,14 @@
             </div>
          </div>
       </footer>
+   <script src="./js/script.js"></script>
+
       <script
          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
          crossorigin="anonymous"
          ></script>
+
    </body>
+   
 </html>

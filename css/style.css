@@ -33,17 +33,22 @@ a {
   margin-top: 10px !important;
 }
 
+
+
 .small-nav #topnav{
   margin-top: 10px;
 }
-
 .others {
-  background: var(--primary-color);
-  padding: 2px 15px;
-  color: white;
-  font-size: 16px;
+    background: white;
+    color: black !important;
+    font-size: 16px;
+    padding: 8px 15px;
 }
 
+.small-nav a{
+  color: white;
+  font-weight: normal;
+}
 
 .header-title {
   font-family: "Mukta", sans-serif;
@@ -222,6 +227,10 @@ img {
   padding-top: 2rem;
   background-color: #192831;
   color: #777;
+}
+
+.bg-primary{
+  background-color: var(--primary-color) !important;
 }
 
 .footer .footer-site-logo {

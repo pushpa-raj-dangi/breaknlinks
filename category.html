@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Break</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://breaknlinks.com/np/frontend/fontawesome/css/all.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script
+        nonce="eefb35c1-7a2a-43bc-9594-9c9760ba89de">(function (w, d) { !function (a, b, c, d) { a[c] = a[c] || {}; a[c].executed = []; a.zaraz = { deferred: [], listeners: [] }; a.zaraz.q = []; a.zaraz._f = function (e) { return async function () { var f = Array.prototype.slice.call(arguments); a.zaraz.q.push({ m: e, a: f }) } }; for (const g of ["track", "set", "debug"]) a.zaraz[g] = a.zaraz._f(g); a.zaraz.init = () => { var h = b.getElementsByTagName(d)[0], i = b.createElement(d), j = b.getElementsByTagName("title")[0]; j && (a[c].t = b.getElementsByTagName("title")[0].text); a[c].x = Math.random(); a[c].w = a.screen.width; a[c].h = a.screen.height; a[c].j = a.innerHeight; a[c].e = a.innerWidth; a[c].l = a.location.href; a[c].r = b.referrer; a[c].k = a.screen.colorDepth; a[c].n = b.characterSet; a[c].o = (new Date).getTimezoneOffset(); if (a.dataLayer) for (const n of Object.entries(Object.entries(dataLayer).reduce(((o, p) => ({ ...o[1], ...p[1] })), {}))) zaraz.set(n[0], n[1], { scope: "page" }); a[c].q = []; for (; a.zaraz.q.length;) { const q = a.zaraz.q.shift(); a[c].q.push(q) } i.defer = !0; for (const r of [localStorage, sessionStorage]) Object.keys(r || {}).filter((t => t.startsWith("_zaraz_"))).forEach((s => { try { a[c]["z_" + s.slice(7)] = JSON.parse(r.getItem(s)) } catch { a[c]["z_" + s.slice(7)] = r.getItem(s) } })); i.referrerPolicy = "origin"; i.src = "/cdn-cgi/zaraz/s.js?z=" + btoa(encodeURIComponent(JSON.stringify(a[c]))); h.parentNode.insertBefore(i, h) };["complete", "interactive"].includes(b.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, "zarazData", "script"); })(window, document);</script>
+</head>
+<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <header class="container-fluid bg-primary">
+        <nav class="navbar container d-md-none d-lg-block navbar-expand-lg fw-bold small-nav">
+            <div class="container-fluid top-nav">
+
+                <a class="others fw-medium" href="#">अन्य संस्करण</a>
+                <select
+                    class="form-control w-25 d-block d-md-none d-lg-none d-xl-none d-xxl-none form-control-sm bg-transparent border-0 text-white "
+                    onchange="location = this.value;" style="transition: max-height 1s;">
+                    <option class="bg-primary border-0" selected="" value="https://breaknlinks.com/en">
+                        English
+                    </option>
+                    <option class="bg-primary border-0" value="https://breaknlinks.com/nepali">
+                        नेपाली
+                    </option>
+                    <option class="bg-primary border-0" value="https://breaknlinks.com/hindi">
+                        हिन्दी
+                    </option>
+                    <option class="bg-primary border-0" value="https://breaknlinks.com/nepali">
+                        Nepal
+                    </option>
+                    <option class="bg-primary border-0" value="https://breaknlinks.com/eng">
+                        Eng
+                    </option>
+                </select>
+                <div class="collapse navbar-collapse" id="topnav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link ps-4" aria-current="page" href="#">
+                                नेपाली</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">English</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Hindi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Español</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">عربي한국어中文</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex list-style align-items-center gap-2">
+                        <li class="social-nav">
+                            <a href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-nav">
+                            <a href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-nav">
+                            <a href="" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-nav">
+                            <a href="https://breaknlinks.com/nepali/preeti-to-unicode" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-keyboard" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14 5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h12zM2 4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2z" />
+                                    <path
+                                        d="M13 10.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm0-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5 0A.25.25 0 0 1 8.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 8 8.75v-.5zm2 0a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5a.25.25 0 0 1-.25-.25v-.5zm1 2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-5-2A.25.25 0 0 1 6.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 6 8.75v-.5zm-2 0A.25.25 0 0 1 4.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 4 8.75v-.5zm-2 0A.25.25 0 0 1 2.25 8h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 2 8.75v-.5zm11-2a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm-2 0A.25.25 0 0 1 9.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 9 6.75v-.5zm-2 0A.25.25 0 0 1 7.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 7 6.75v-.5zm-2 0A.25.25 0 0 1 5.25 6h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5A.25.25 0 0 1 5 6.75v-.5zm-3 0A.25.25 0 0 1 2.25 6h1.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-1.5A.25.25 0 0 1 2 6.75v-.5zm0 4a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-.5zm2 0a.25.25 0 0 1 .25-.25h5.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-5.5a.25.25 0 0 1-.25-.25v-.5z" />
+                                </svg>
+                                युनिकोड
+                            </a>
+                        </li>
+                        <li class="small-nav d-flex">
+                            <button id="searchIcon" class="btn" type="button" id="inputGroupFileAddon04">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                            </button>
+                            <form action="" class="d-none d-flex" id="searchBox">
+                                <input type="text" class="form-control" placeholder="यहाँ टाईप गर्नुहोस्..."
+                                    aria-label="Search" aria-describedby="button-addon4" />
+
+                                <!--  <button class="btn bg-white " type="button" id="button-addon4">
+                                                                                                                                                                                                                                                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                                                                                                                                                                                                                                                                         viewBox="0 0 16 16">
+                                                                                                                                                                                                                                                                         <path
+                                                                                                                                                                                                                                                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                                                                                                                                                                                                                                                      </svg>
+                                                                                                                                                                                                                                                                   </button>
+                                                                                                                                                                                                                                                                   -->
+
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="bg-body-tertiary my-nav border-bottom">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg my-nav py-0">
+                <div class="container-fluid">
+                    <a class="d-inline-block" href="/">
+                        <img style="height: 35px; object-fit: contain; margin-left: -25px" id="logo_image_nav"
+                            class="me-5" src="https://breaknlinks.com/frontend/img/logo.png" alt="BL Media"
+                            data-pagespeed-url-hash="2345619438"
+                            data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);"
+                            onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)"
+                            data-pagespeed-loaded="1" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></i>
+                    </button>
+                    <div class="collapse navbar-collapse pe-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-lg-0 align-items-center">
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/break" class="nav-link">
+                                    <nobr> ब्रेक </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/bl-special" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> बिएल विशेष </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/brandstory" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> ब्राण्ड स्टोरी </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/social-10-2-28" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> समाज </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/politics-38-27-36" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> राजनीति </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/sports-9-18" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> खेल </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/opinion" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> विचार</nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/econimics" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> अर्थ </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/art-1" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> कला </nobr>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://breaknlinks.com/nepali/category/nrna" class="nav-link"
+                                    style="padding: 0.8em 1.2em !important">
+                                    <nobr> एनआरएन </nobr>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-left py-5">
+                <h1 class="small-title">शिक्षा</h1>
+                <hr style="margin-top:-8px">
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/963047">
+                                        <img width="840" height="540"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2019/05/poisa.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            fetchpriority="high"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2019/05/poisa.jpg 840w, https://www.news24nepal.tv/wp-content/uploads/2019/05/poisa-768x494.jpg 768w"
+                                            sizes="(max-width: 840px) 100vw, 840px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/963047">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">प्रधानाध्यापकले बाँडिदिए आफ्नो तलब निजी
+                                            स्रोतका शिक्षकलाई
+                                        </h2>
+                                        <p class="">कञ्चनपुर । शुक्लाफाँटा नगरपालिकाको आन्तरिक खिचलोका कारण निजी स्रोतका
+                                            शिक्षकको तलब रोकिएको छ । दसैँका बेला तलब थाप्न नपाएपछि उनीहरु निराश बनेका
+                                            छन् ।
+                                            यसैबीच दसैँका बेला बेखर्ची भएका निजी</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962924">
+                                        <img width="1280" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/bhukampa-prabhabit__100.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/bhukampa-prabhabit__100.jpg 1280w, https://www.news24nepal.tv/wp-content/uploads/2023/10/bhukampa-prabhabit__100-768x432.jpg 768w"
+                                            sizes="(max-width: 1280px) 100vw, 1280px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962924">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">बाजुराका विद्यार्थीको बिचल्ली, बस्न घर छैन,
+                                            पढ्न विद्यालय
+                                            छैन</h2>
+                                        <p class="">बाजुरा । बाजुरामा भुकम्पले अधिकांश भौतिक संरचना तहसनहस बनायो ।
+                                            त्यसैले
+                                            यहाँको जनजीवन अझै अस्तव्यस्त छ । भूकम्पले शैक्षिक क्षेत्रसमेत प्रभावित
+                                            बनाएको छ ।
+                                            शैक्षिक संस्थाहरु भत्किँदा विद्यार्थीहरु चौरमा बसेर</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962676">
+                                        <img width="2560" height="1707"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-scaled.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-scaled.jpg 2560w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-768x512.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-1536x1024.jpg 1536w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-2048x1365.jpg 2048w"
+                                            sizes="(max-width: 2560px) 100vw, 2560px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962676">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">संघीय शिक्षा विधेयक संशोधनका लागि बाटो खुल्यो
+                                        </h2>
+                                        <p class="">काठमाडौं । लामो समयको रस्साकस्सीपछि संसदमा टेबल भएको संघीय शिक्षा
+                                            विधेयकबारे
+                                            शुक्रबारदेखि प्रतिनिधिसभा बैठकमा छलफल प्रारम्भ भएको छ । विधेयक संसदमा टेवल
+                                            हुनुअघि
+                                            नै सरोकारवालाहरुसँग सहमति भएकाले संशोधन कसरी गर्ने</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962506">
+                                        <img width="2560" height="1707"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-scaled.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-scaled.jpg 2560w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-768x512.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-1536x1024.jpg 1536w, https://www.news24nepal.tv/wp-content/uploads/2023/10/RS_KTM-RATL6643-2048x1365.jpg 2048w"
+                                            sizes="(max-width: 2560px) 100vw, 2560px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962506">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">शिक्षकसँग भएका सम्झौताबिनै शिक्षा विधेयकमा
+                                            छलफल, सांसदले
+                                            गरे
+                                            पुनर्लेखनको माग</h2>
+                                        <p class="">काठमाडौँ । नेपाली कांग्रेसका महामन्त्री एवं प्रतिनिधिसभा सदस्य
+                                            विश्वप्रकाश
+                                            शर्माले सत्तापक्ष र प्रतिपक्ष दुवैको सहमतिमा शिक्षा विधेयकलाई पुनर्लेखन
+                                            गर्नुपर्ने
+                                            माग गरेका छन् । प्रतिनिधिसभाको आजको बैठकमा विद्यालय शिक्षासम्बन्धी कानूनलाई
+                                            संशोधन
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962491">
+                                        <img width="1280" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/sikchayek__100.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/sikchayek__100.jpg 1280w, https://www.news24nepal.tv/wp-content/uploads/2023/10/sikchayek__100-768x432.jpg 768w"
+                                            sizes="(max-width: 1280px) 100vw, 1280px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962491">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">शिक्षाको गुणस्तर बढाउन शिक्षकमा लगानी</h2>
+                                        <p class="">काठमाडौँ । प्रत्येक नागरिकलाई राज्यबाट आधारभूत तह सम्मको शिक्षा
+                                            अनिवार्य र
+                                            निःशुल्क गर्ने तथा माध्यमिक तहसम्मको शिक्षा निःशुल्क हुने भनी संविधानमा नै
+                                            उल्लेख छ
+                                            । तर संविधान जारी भएको ८</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962399">
+                                        <img width="1280" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/Pulchok_Bibad.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/Pulchok_Bibad.jpg 1280w, https://www.news24nepal.tv/wp-content/uploads/2023/10/Pulchok_Bibad-768x432.jpg 768w"
+                                            sizes="(max-width: 1280px) 100vw, 1280px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962399">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">किन हाबी भइरहेछ इन्जिनियरिङ संस्थानमा राजनीति
+                                            ?</h2>
+                                        <p class="">काठमाडौं । नेपालकै एक मात्रै पुरानो त्रिभुवन विश्वविद्यालय राजनीतिक
+                                            खिचातानीले गर्दा आक्रान्त बनेको छ । विश्व विद्यालयभित्र गिजोलिएको राजनीतिले
+                                            गर्दा
+                                            प्रशासनदेखि पठनपाठन समेत बिग्रिएको छ । त्रिविको प्राविधिक विषयतर्फ भने</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962285">
+                                        <img width="1280" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/10/Baideshik-Shikshya__100.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/10/Baideshik-Shikshya__100.jpg 1280w, https://www.news24nepal.tv/wp-content/uploads/2023/10/Baideshik-Shikshya__100-768x432.jpg 768w"
+                                            sizes="(max-width: 1280px) 100vw, 1280px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962285">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">वैदेशिक शिक्षामा अर्थोपार्जन र सम्भावनाको खोजी
+                                        </h2>
+                                        <p class="">काठमाडाैँ । नेपालमा वर्षौनी विदेश पढ्न जाने विद्यार्थीको दर बढ्दो छ
+                                            । नेपाल
+                                            राष्ट्र बैंकको मासिक प्रतिवेदनका अनुसार केही वर्ष यता विदेश अध्ययनका लागि
+                                            नेपालबाट
+                                            ठूलो रकम बाहिरिरहेको छ ।</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/962026">
+                                        <img width="1139" height="567"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher.jpg 1139w, https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher-768x382.jpg 768w"
+                                            sizes="(max-width: 1139px) 100vw, 1139px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/962026">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">राहत शिक्षक र सरकारबीच सहमति, आन्दोलन फिर्ता
+                                        </h2>
+                                        <p class="">काठमाडौँ । विगत नौ दिनदेखि काठमाडौँमा आन्दोलनरत राहत शिक्षकहरू र
+                                            सरकारबीच
+                                            सहमति भएको छ । असोज ३ गतेदेखि शिक्षक महासंघको नेतृत्वमा शिक्षक आन्दोलन भए
+                                            पनि दुई
+                                            दिनपछि नै महासंघले सरकारसँग</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961779">
+                                        <img width="1092" height="574"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher2.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher2.jpg 1092w, https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-teacher2-768x404.jpg 768w"
+                                            sizes="(max-width: 1092px) 100vw, 1092px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961779">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">सडकमा नाच्दै दिन बिताउँदै राहत शिक्षक, आन्दोलन
+                                            जारी</h2>
+                                        <p class="">काठमाडाैँ । राहत शिक्षकहरुले संसदमा दर्ता भएको शिक्षा विधेयकमा
+                                            शिक्षकहरुको
+                                            माग सम्बोधन नगरेको भन्दै आन्दोलन जारी राखेका छन् । गत बुधवारदेखि देशभरका
+                                            शिक्षकहरु
+                                            काठमाडौं केन्द्रित भएर आन्दोलनमा उत्रिएका थिए ।</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961703">
+                                        <img width="1280" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-sikshyak.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-sikshyak.jpg 1280w, https://www.news24nepal.tv/wp-content/uploads/2023/09/rahat-sikshyak-768x432.jpg 768w"
+                                            sizes="(max-width: 1280px) 100vw, 1280px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961703">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">विद्यालय फर्किएनन् राहत शिक्षक, कारबाही गर्ने
+                                            कि माग पूरा ?
+                                        </h2>
+                                        <p class="">एलिसा अर्याल काठमाडौं । विद्यालय शिक्षा विधेयकको विरोध गर्दै
+                                            आन्दोलनमा
+                                            उत्रिएका शिक्षक महासंघसँग सरकारले सहमति गरेको भए पनि राहत शिक्षक भने त्यसलाई
+                                            नमानेर
+                                            प्रदर्शन गरिरहेका छन् । सरकारले शिक्षक महासंघसँग</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961470">
+                                        <img width="2560" height="1699"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-scaled.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-scaled.jpg 2560w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-768x510.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-1536x1019.jpg 1536w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-2048x1359.jpg 2048w"
+                                            sizes="(max-width: 2560px) 100vw, 2560px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961470">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">शिक्षक महासंघले धोका दिएको भन्दै सडक छाडेनन्
+                                            शिक्षकले</h2>
+                                        <p class="">एलिसा अर्याल काठमाडौँ । आन्दोलनरत शिक्षक महासंघ र सरकारबीच शुक्रबार
+                                            संसदमा
+                                            दर्ता विद्यालय शिक्षा विधेयक संशोधन गर्ने समझदारी भयो । तर, राहत शिक्षकले
+                                            भने
+                                            सहमतिप्रति असन्तुष्टि जनाउँदै अझै पनि सडकमै</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961339">
+                                        <img width="2560" height="1707"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/1-22-scaled.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/1-22-scaled.jpg 2560w, https://www.news24nepal.tv/wp-content/uploads/2023/09/1-22-768x512.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/09/1-22-1536x1024.jpg 1536w, https://www.news24nepal.tv/wp-content/uploads/2023/09/1-22-2048x1365.jpg 2048w"
+                                            sizes="(max-width: 2560px) 100vw, 2560px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961339">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">आन्दोलनरत शिक्षक महासंघ र सरकारबीचको सहमतिमा
+                                            राहत शिक्षकको
+                                            असन्तुष्टि</h2>
+                                        <p class="">काठमाडौं । आन्दोलनरत शिक्षक महासंघ र सरकारबीच सहमति भएको छ ।
+                                            शुक्रवार गृह
+                                            मन्त्रालयमा भएको सरकार र शिक्षकका प्रतिनिधिको छलफलबाट संसदमा दर्ता विद्यालय
+                                            शिक्षा
+                                            विधेयक संशोधन गर्ने समझदारी भएको हो</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961329">
+                                        <img width="1000" height="500"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/sahamati.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/sahamati.jpg 1000w, https://www.news24nepal.tv/wp-content/uploads/2023/09/sahamati-768x384.jpg 768w"
+                                            sizes="(max-width: 1000px) 100vw, 1000px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961329">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">शिक्षक र सरकारबीच सहमति, आन्दोलन फिर्ता</h2>
+                                        <p class="">काठमाडौं । तीन दिनदेखि आन्दोलनरत शिक्षकहरु र सरकारबीच सहमति भएको छ ।
+                                            शुक्रबार दिउँसो गृहमन्त्रालयमा शिक्षा मन्त्रालय र शिक्षक प्रतिनिधिहरुको
+                                            बैठकले तयार
+                                            पारेको मस्यौदापत्रमा दुई पक्षबीच सहमति भएको हो। उक्त</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961324">
+                                        <img width="1600" height="720"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/barta-jari.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/barta-jari.jpg 1600w, https://www.news24nepal.tv/wp-content/uploads/2023/09/barta-jari-768x346.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/09/barta-jari-1536x691.jpg 1536w"
+                                            sizes="(max-width: 1600px) 100vw, 1600px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961324">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">सरकार र आन्दोलनरत शिक्षकबीच गृहमन्त्रालयमा
+                                            वार्ता जारी</h2>
+                                        <p class="">काठमाडौं । सरकार र आन्दोलनरत शिक्षकबीच गृहमन्त्रालयमा वार्ता सुरू
+                                            भएको छ।
+                                            विद्यालय शिक्षा विधेयकविरुद्ध तीन दिनदेखि आन्दोलरत शिक्षकसँग सरकारले केही
+                                            बेरअघिबाट
+                                            वार्ता सुरू गरेको हो। जारी वार्तामा सरकारले शिक्षकको माग</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-5">
+                    <div class="shadow-sm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="shadow-sm  text-center">
+                                    <a class="my-5" href="breaknlinks.com/961312">
+                                        <img width="2560" height="1699"
+                                            src="https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-scaled.jpg"
+                                            class="attachment-full size-full wp-post-image" alt="" decoding="async"
+                                            loading="lazy"
+                                            srcset="https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-scaled.jpg 2560w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-768x510.jpg 768w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-1536x1019.jpg 1536w, https://www.news24nepal.tv/wp-content/uploads/2023/09/teacher-andolan-2048x1359.jpg 2048w"
+                                            sizes="(max-width: 2560px) 100vw, 2560px">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a class="my-5" href="breaknlinks.com/961312">
+                                    <div class="media-body p-3">
+                                        <h2 class="mt-0 p-2 small-title">शिक्षा विधेयकको विरोध : तेस्रो दिन सडकमा
+                                            आन्दोलनसँगै
+                                            शिक्षकहरुको
+                                            नाचगान</h2>
+                                        <p class="">काठमाडौं । सरकारले संसद सचिवालयमा दर्ता गरेको विद्यालय शिक्षा
+                                            विधेयकको
+                                            विरोधमा आज तेस्रो दिन पनि शिक्षकहरुले प्रदर्शन गरेका छन् । काठमाडौंको
+                                            माईतीघरमा
+                                            देशभरबाट आन्दोलनका लागि आएका शिक्षकहरुले विद्यालय शिक्षा विधेयकको</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <aside class=" sticky-top">
+
+                    <div class="col-md-12 mb-4">
+                        <h5 class="header-title">ब्रेक</h5>
+                    </div>
+                    <div class="border-bottom border-2 pb-2">
+                        <figure class="position-relative">
+                            <img src="https://www.onlinekhabar.com/wp-content/uploads/2023/10/Leo-Thalapati-Vijay.jpg"
+                                alt="">
+                        </figure>
+                        <a href="">
+                            <h1 class="small-title py-1">
+                                ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य!
+                            </h1>
+                        </a>
+                    </div>
+                    <ul class="list-style list-group mt-3">
+                        <li class="m-0 my-2">
+                            <a class="d-flex align-items-center a-hover" href="">
+
+                                <h2 class="samaj-title a-hover">
+                                    तीन महिनामा ४ अर्ब ८६ करोडभन्दा बढीको तरकारी
+                                </h2>
+                            </a>
+                            <span class="souce fw-bold text-muted">
+                                बिएल संवाददाता -काठमाडाैँ
+                            </span>
+                        </li>
+                        <li class="m-0 my-2">
+                            <a class a-hover d-flex align-items-center="" href="">
+
+                                <h2 class="samaj-title">
+                                    सुकुम्बासीले पाएनन् लालपुर्जा, सरकारप्रति छैन भरोषा
+                                </h2>
+                            </a>
+                            <span class="souce fw-bold text-muted">
+                                बिएल संवाददाता -काठमाडाैँ
+                            </span>
+                        </li>
+                        <li class="m-0 my-2">
+                            <a class a-hover d-flex align-items-center="" href="">
+
+                                <h2 class="samaj-title">
+                                    ज्ञानेन्द्र शाहलाई माधव नेपालको चुनौती : पार्टी खोलेर चुनाव लड्नुस्
+
+                                </h2>
+                            </a>
+                            <span class="souce fw-bold text-muted">
+                                बिएल संवाददाता -काठमाडाैँ
+                            </span>
+                        </li>
+                        <li class="m-0 my-2">
+                            <a class a-hover d-flex align-items-center="" href="">
+
+                                <h2 class="samaj-title">
+                                    साउदीलाई ३०१ रनले हराउँदै नेपाल सेमिफाइनलमा
+                                </h2>
+                            </a>
+                            <span class="souce fw-bold text-muted">
+                                बिएल संवाददाता -काठमाडाैँ
+                            </span>
+                        </li>
+                    </ul>
+
+                    <div class="col-md-12 my-4">
+                        <h5 class="header-title">ट्रेन्डिङ</h5>
+                    </div>
+
+                    <div class="d-flex align-items-center border-bottom mb-3">
+                        <figure class="post_img">
+                            <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                <img style="    width: 80px;
+                    height: 80px;" src="https://www.onlinekhabar.com/wp-content/uploads/2023/08/Prakriti-Wasti-2.jpg"
+                                    alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                            </a>
+                        </figure>
+                        <div class="ps-3">
+                            <h5 class="fw-bold medium-title fs-5">
+                                <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                    ज्ञानेन्द्र शाहलाई माधव नेपालको चुनौती : पार्टी खोलेर चुनाव लड्नुस्
+
+                                </a>
+                            </h5>
+                            <p class="text-muted fw-bold">
+                                बिएल संवाददाता
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom mb-3">
+                        <figure class="post_img">
+                            <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                <img style="    width: 80px;
+                    height: 80px;" src="https://www.onlinekhabar.com/wp-content/uploads/2023/09/Nepal-Cricket-association-CAN.jpg"
+                                    alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                            </a>
+                        </figure>
+                        <div class="ps-3">
+                            <h5 class="fw-bold medium-title fs-5">
+                                <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                    मन्त्रिपरिषद्‍मा उपप्रधानमन्त्री श्रेष्ठको स्वास्थ्य अवस्थाबारे प्रधानमन्त्रीको
+                                    ‘ब्रिफिङ’
+
+                                </a>
+                            </h5>
+                            <p class="text-muted fw-bold">
+                                बिएल संवाददाता
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom mb-3">
+                        <figure class="post_img">
+                            <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                <img style="    width: 80px;
+                    height: 80px;" src="https://www.onlinekhabar.com/wp-content/uploads/2023/10/Janakpur-Airport-UML-1024x472.jpg"
+                                    alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                            </a>
+                        </figure>
+                        <div class="ps-3">
+                            <h5 class="fw-bold medium-title fs-5">
+                                <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                    ओलीलाई स्वागत गर्न जनकपुर विमानस्थलको धावनमार्गमै पुगे कार्यकर्ता
+                                </a>
+                            </h5>
+                            <p class="text-muted fw-bold">
+                                बिएल संवाददाता
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center border-bottom mb-3">
+                        <figure class="post_img">
+                            <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                <img style="    width: 80px;
+                    height: 80px;" src="https://www.onlinekhabar.com/wp-content/uploads/2023/10/Israel-1-1024x682.jpg"
+                                    alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                            </a>
+                        </figure>
+                        <div class="ps-3">
+                            <h5 class="fw-bold medium-title fs-5">
+                                <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                    इजरायल आक्रमणमा १० नेपाली मारिएको पुष्टि
+
+                                </a>
+                            </h5>
+                            <p class="text-muted fw-bold">
+                                बिएल संवाददाता
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center  mb-3">
+                        <figure class="post_img">
+                            <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                <img style="    width: 80px;
+                    height: 80px;" src="https://i0.wp.com/www.nayapage.com/wp-content/uploads/2023/10/gaun-aayako-bato_7w5cd97j2y.png"
+                                    alt="‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !">
+                            </a>
+                        </figure>
+                        <div class="ps-3">
+                            <h5 class="fw-bold medium-title fs-5">
+                                <a href="https://breaknlinks.com/np/category/social-10-2-28/news/10">
+                                    ‘जम्मु–कश्मीर’ अर्थात् डरै–डरको साम्राज्य !
+                                </a>
+                            </h5>
+                            <p class="text-muted fw-bold">
+                                बिएल संवाददाता
+
+                            </p>
+                        </div>
+                    </div>
+                    </asi>
+            </div>
+            <div class="col-md-12 mt-5">
+                <ul class="pagination pagination-sm">
+                    <li class="active page-item"><a href="page" class="page-link">1</a>
+                    </li>
+                    <li class="page-item"><a href="page&amp;paged=2" class="page-link">2</a>
+                    </li>
+                    <li class="page-item"><a href="page&amp;paged=3" class="page-link">3</a>
+                    </li>
+                    <li class="page-item"><a href="#" class="page-link">...</a></li>
+                    <li class="page-item"><a href="page&amp;paged=168" class="page-link">168</a></li>
+                    <li class="page-item"><i class="page-link"><a href="page&amp;paged=2">Next
+                                Page »</a></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 pr-md-5">
+                    <a class="d-flex gap-3 align-items-center" href="https://breaknlinks.com/np/np">
+                        <img src="https://breaknlinks.com/frontend/img/logo.png" class="img-fluid"
+                            style="width:80px;object-fit: contain;" alt="BL Media">
+                        <div class="">
+                            <p class="fw-bold fs-5  lh-sm text-white">BL Media Inc</p>
+                            <p class="text-white lh-sm">Media for all across the globe</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md">
+                    <h1 class="fw-bold text-break-primary text-uppercase">Editions</h1>
+                    <ul class="list-unstyled nav-links">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Nepali</a></li>
+                        <li><a href="#">Hindi</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">عربي한국어中文</a></li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <h1 class="fw-bold text-break-primary text-uppercase">About Us</h1>
+                    <ul class="list-unstyled nav-links">
+                        <li><a href="#">Email : breaknlinks@gmail.com
+                            </a>
+                        </li>
+                        <li><a href="#">Contact No : +97714496040</a></li>
+                        <li><a href="#">
+                                Address : New Baneshowr,10 Kathmandu</a>
+                        </li>
+                        <li><a href="#">Reg.No.350/2075-76</a></li>
+                    </ul>
+                </div>
+                <div class="col-md">
+                    <p class><a class="text-white fw-bold  text-break-primary text-uppercase">Follow Us</a></p>
+                    <ul class="social list-unstyled">
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-youtube" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="copyright pt-3">
+                        <p><small class="fs-6 ">&copy; 2023 All Rights Reserved.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
